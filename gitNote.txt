@@ -1,0 +1,67 @@
+Git: REAL
+
+Distributed version control system (DVCS)  
+
+Git work flow:
+===========================
+Starts as untracked
+Add file to staging area
+Commit changes
+
+git help				
+===========================
+help any way!
+
+local repo
+******************************************************************
+
+git init			initialise a git folder
+===========================
+
+git status				To see unstaged change since last commit.
+===========================
+git checkout — {files}	To get back to committed file and ignore the changes.
+
+git add {files/—all}			add changes to stage
+===========================
+git reset HEAD {files}		unstaged a staged file	HEAD refers to last commit we made
+
+
+git commit -m “{Metadata of what you done.}”		commit changes to repo
+===========================
+git commit -a -m “{modify comment}” 			skip staging and commit
+git reset —soft HEAD^						reset last commit and puts it in staged state
+git commit —amend -m “{New comment}”		add a file to preview commit and overwrite comment
+git reset —hard HEAD^							reset last commit
+git reset —hard HEAD^^						back to two last commit
+
+
+git log			show the last commit and comments
+===========================
+
+git diff 			show edit files
+===========================
+git diff			unstaged edits
+git diff —staged	staged files
+
+
+
+
+
+git remote add origin https://github.com/try-git/try_git.git
+git push -u origin{remoteName} master{localBranchName}	Upload
+git pull origin master
+git diff HEAD
+git add octofamily/octodog.txt
+git diff --staged
+git checkout — <target>
+git branch cleanup
+git rm ‘*.txt’
+git merge clean_up
+git branch -d clean_up
+
+
+
+/etc/sudoers: 
+
+(+) scout ALL=(ALL) NOPASSWD: /sbin/iptables-save
