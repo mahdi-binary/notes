@@ -1,0 +1,73 @@
+Event Driven Programming:
+
+
+Event Driven Programming Program structure
+*****************************************
+import simplegui
+import math
+
+# intialize globals
+variableName = Value									
+
+# helper function
+def func(x, y):
+    return <functionOnXY(x, y)
+
+# define event handler
+def eventHandler(t):
+    global variableName
+    <what you want happen>
+
+# create frame
+frame = simplegui.create_frame("<Title>", <WIDTH>, <HEIGHT>)
+frame.set_canvas_background("<colour>")
+
+# register event handler
+frame.set_<func>(<eventHandler>)
+
+# start frame & timer
+frame.start()
+    
+
+list
+*****************************************
+mt_list = [ ] 				#empty list
+list1 = [1, 2, 3]
+list2 = ['hello', 'welcome']
+list3 = [[], [1, 2, 3], ['Yes', 'No']]
+len(listX) 					#length of listX
+
+							## String is a kind of list 
+
+list3[3]                    # third element of list3
+list3[-1]					# last element of list3
+list2[2]='bye'				# change 2nd element of list2 to 'bye'
+list2.append('hi')			# add a new element to the list
+list3.pop() or (3)			# remove last of 3rd element of list3
+list2.remove(x)				# remove x in the list2
+x in list3					# is there x in list3 (Boolean)
+list3.index(x)				# where is x in list3
+
+new_list= list(oldList) 	# copy the list to new list
+
+Irritation 
+*****************************************
+	for x in list_t:
+		<do somthing>
+	
+	
+
+
+
+
+
+Mouse input
+*****************************************
+import simplegui
+
+def mouse_handler(position):
+    …
+
+frame = simplegui.create_frame('Testing', 100, 100)
+frame.set_mouseclick_handler(mouse_handler)
+frame.start()
