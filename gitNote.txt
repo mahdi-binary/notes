@@ -7,8 +7,8 @@
 DVCS = Distributed version control system 
 
 Git work flow:		- Starts as untracked
-					- Add file to staging area
-					- Commit changes
+			- Add file to staging area
+			- Commit changes
 
 git help											help any way!			
 ===========================
@@ -52,11 +52,17 @@ Host:		- GitHub
 Self Managed:	- Gitosis
 		- Gitorious
 
-git remote add origin {URL}
+git remote add {origin} {URL}									Adding a remote to you repo
 ===========================
-	add 	=> 
-git push -u origin{remoteName} master{localBranchName}	Upload
-git pull origin master
+	add	 => new remote									
+	{origin} => name for this remote
+git remote -v											show remote repositories
+
+git push -u {origin} {master}									pushing to remote
+===========================
+	{origin} => name for this remote
+	{master} => name for local branch
+
 git diff HEAD
 git add octofamily/octodog.txt
 git diff --staged
