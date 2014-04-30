@@ -21,20 +21,20 @@ git init											initialise a git folder
 
 git status											To see unstaged change since last commit.
 ===========================
-git checkout — {files}								To get back to committed file and ignore the changes.
+git checkout — {files}										To get back to committed file and ignore the changes.
 
-git add {files/—all}								add changes to stage
+git add {files/—all}										add changes to stage
 ===========================
-git reset HEAD {files}								unstaged a staged file	HEAD refers to last commit we made
+git reset HEAD {files}										unstaged a staged file	HEAD refers to last commit we made
 
 
-git commit -m “{Metadata of what you done.}”		commit changes to repo
+git commit -m “{Metadata of what you done.}”							commit changes to repo
 ===========================
-git commit -a -m “{modify comment}” 				skip staging and commit
-git reset —soft HEAD^								reset last commit and puts it in staged state
-git commit —amend -m “{New comment}”				add a file to preview commit and overwrite comment
-git reset —hard HEAD^								reset last commit
-git reset —hard HEAD^^								back to two last commit
+git commit -a -m “{modify comment}” 								skip staging and commit
+git reset —soft HEAD^										reset last commit and puts it in staged state
+git commit —amend -m “{New comment}”								add a file to preview commit and overwrite comment
+git reset —hard HEAD^							    			reset last commit
+git reset —hard HEAD^^										back to two last commit
 
 
 git log												show the last commit and comments
@@ -43,14 +43,14 @@ git log												show the last commit and comments
 git diff 											show edit files
 ===========================
 git diff											unstaged edits
-git diff —staged									staged files
+git diff —staged									 	staged files
 
 Online repo
 ******************************************************************
-Host:			- GitHub
-				- BitBucket
+Host:		- GitHub
+		- BitBucket
 Self Managed:	- Gitosis
-				- Gitorious
+		- Gitorious
 
 git remote add origin {URL}
 ===========================
