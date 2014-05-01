@@ -53,8 +53,9 @@ new_list= list(oldList) 		# copy the list to new list
 
 Irritation 
 *****************************************
-	for x in list_t:
-		<do somthing>	
+for x in list_t:
+	<do somthing>
+func(x) for x in list_t if condition(x)	
 	
 Dictionary				# mapping 	key -> values
 *****************************************
