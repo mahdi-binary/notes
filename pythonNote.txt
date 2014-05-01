@@ -64,7 +64,7 @@ d[1] = 37
 d2 = {‘a’ : 47}
 d3 = {‘ab’ : [1,2,4,8]}
 d2[‘a’]  -> 47
-d3.items() -> <key>,<value>
+d3.items() -> <key>,<value>		#tip: <key> should be unhashable value.
 
 Mouse input
 *****************************************
@@ -81,4 +81,5 @@ Images
 *****************************************
 im = simplegui.image(<URL>)
 canvas.draw_image(im, src_center, src_size, dst_center, dst_size)		# rectangle in image: src_center, src_size	# rectangle in canvas: dst_center, dst_size
+
 
