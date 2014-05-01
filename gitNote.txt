@@ -89,7 +89,12 @@ branching
 ******************************************************************
 git branch <branchName>										create a branch
 git branch											show list of branches
-git checkout <branchName>
+git checkout <branchName>									change to other branch
+git checkout -b <branchName>									create and change to the branch
+git merge <branchName>										merge changes from a branch to other
+git branch -d <branchName>									delete the branch
+
+
 
 /etc/sudoers: 
 
