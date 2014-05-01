@@ -30,7 +30,7 @@ git reset HEAD {files}										unstaged a staged file	HEAD refers to last commi
 
 git commit -m “{Metadata of what you done.}”							commit changes to repo
 ===========================
-git commit -a -m “{modify comment}” 								skip staging and commit
+git commit -a -m “{modify comment}” {file name}							skip staging and commit
 git reset —soft HEAD^										reset last commit and puts it in staged state
 git commit —amend -m “{New comment}”								add a file to preview commit and overwrite comment
 git reset —hard HEAD^							    			reset last commit
@@ -52,16 +52,29 @@ Host:		- GitHub
 Self Managed:	- Gitosis
 		- Gitorious
 
-git remote add {origin} {URL}									Adding a remote to you repo
+git remote add {name} {URL}									adding a remote to you repo
 ===========================
 	add	 => new remote									
-	{origin} => name for this remote
+	{name} => name for this remote
 git remote -v											show remote repositories
+git remove {name}										remove a repo from service
 
-git push -u {origin} {master}									pushing to remote
+git push -u {name} {branch}									pushing to remote
 ===========================
-	{origin} => name for this remote
-	{master} => name for local branch
+	-u	=> set default name & branch 
+	{name} 	=> name of the remote
+	{branch}=> name for local branch
+
+git clone {URL}	{Optional folder name}								create a folder with remote repository files
+===========================
+What git does: 		- Downloads the entire repository into a new git-real directory.
+			- Adds the ‘origin’ remote, pointing it to the clone URL.
+			- Checks out initial branch  (likely master).
+
+heroku remote
+******************************************************************
+heroku creat											It adds itself to remote repo list
+git push heroku {master}
 
 git diff HEAD
 git add octofamily/octodog.txt
@@ -71,6 +84,15 @@ git branch cleanup
 git rm ‘*.txt’
 git merge clean_up
 git branch -d clean_up
+
+branching
+******************************************************************
+git branch <branchName>										create a branch
+git branch											show list of branches
+git checkout <branchName>									change to other branch
+git checkout -b <branchName>									create and change to the branch
+git merge <branchName>										merge changes from a branch to other
+git branch -d <branchName>									delete the branch
 
 
 
