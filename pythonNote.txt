@@ -5,6 +5,7 @@ Event Driven Programming Program structure
 *****************************************
 import simplegui
 import math
+import random
 
 # intialize globals
 variableName = Value									
@@ -35,12 +36,12 @@ mt_list = [ ] 				#empty list
 list1 = [1, 2, 3]
 list2 = ['hello', 'welcome']
 list3 = [[], [1, 2, 3], ['Yes', 'No']]
-len(listX) 					#length of listX
+len(listX) 				#length of listX
 
-							## String is a kind of list 
+					## String is a kind of list 
 
-list3[3]                    # third element of list3
-list3[-1]					# last element of list3
+list3[3]                    		# third element of list3
+list3[-1]				# last element of list3
 list2[2]='bye'				# change 2nd element of list2 to 'bye'
 list2.append('hi')			# add a new element to the list
 list3.pop() or (3)			# remove last of 3rd element of list3
@@ -48,18 +49,21 @@ list2.remove(x)				# remove x in the list2
 x in list3					# is there x in list3 (Boolean)
 list3.index(x)				# where is x in list3
 
-new_list= list(oldList) 	# copy the list to new list
+new_list= list(oldList) 		# copy the list to new list
 
 Irritation 
 *****************************************
 	for x in list_t:
-		<do somthing>
+		<do somthing>	
 	
-	
-
-
-
-
+Dictionary				# mapping 	key -> values
+*****************************************
+d = {1: 2, 3: 4, 6: 727, <key>: <value>}
+d[1] = 37
+d2 = {‘a’ : 47}
+d3 = {‘ab’ : [1,2,4,8]}
+d2[‘a’]  -> 47
+d3.items() -> <key>,<value>
 
 Mouse input
 *****************************************
@@ -71,3 +75,9 @@ def mouse_handler(position):
 frame = simplegui.create_frame('Testing', 100, 100)
 frame.set_mouseclick_handler(mouse_handler)
 frame.start()
+
+Images
+*****************************************
+im = simplegui.image(<URL>)
+canvas.draw_image(im, src_center, src_size, dst_center, dst_size)		# rectangle in image: src_center, src_size	# rectangle in canvas: dst_center, dst_size
+
