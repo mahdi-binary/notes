@@ -94,6 +94,11 @@ git checkout -b <branchName>									create and change to the branch
 git merge <branchName>										merge changes from a branch to other
 git branch -d <branchName>									delete the branch
 
+collabration
+******************************************************************
+git pull && git push										different version of different file goes to remote caused error
+	=>git pull = git fetch && git merge origin/master
+git pull -> “merge conflict” && edit <conflicted file> && git commit -a && git push		different version of same file 
 
 
 /etc/sudoers: 
