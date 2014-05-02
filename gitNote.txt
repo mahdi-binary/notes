@@ -93,8 +93,10 @@ git checkout <branchName>									change to other branch
 git checkout -b <branchName>									create and change to the branch
 git merge <branchName>										merge changes from a branch to other
 git branch -d <branchName>									delete the branch
-git push {name} {branch}
-
+git push {name} {branch}									setup a new branch in remote based on local branch 
+git branch -r 											show all remote branches
+git remote show <name>
+git push origin :<branch>									delete the branch in remote
 
 collabration
 ******************************************************************
