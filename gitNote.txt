@@ -45,13 +45,20 @@ git diff 											show edit files
 git diff											unstaged edits
 git diff —staged									 	staged files
 
+git tag												to find the tags, usually for versioning
+===========================
+git checkout <some tag>										to checkout some specific changes
+git tag -a <version> -m “comment”								to make a tag point
+git tag												to show tags
+git push —tags											tag on the commits
+
 Online repo
 ******************************************************************
 Host:		- GitHub
 		- BitBucket
 Self Managed:	- Gitosis
 		- Gitorious
-
+	
 git remote add {name} {URL}									adding a remote to you repo
 ===========================
 	add	 => new remote									
@@ -64,6 +71,14 @@ git push -u {name} {branch}									pushing to remote
 	-u	=> set default name & branch 
 	{name} 	=> name of the remote
 	{branch}=> name for local branch
+git pull
+
+git rebase
+===========================
+git fetch 	=> remote -> origin/master							download changes but not merge to master 
+git rebase	=> 1. master -> tempMaster
+		=> 2. origin/master -> master
+		=> 3. tempMaster -> master
 
 git clone {URL}	{Optional folder name}								create a folder with remote repository files
 ===========================
@@ -84,6 +99,7 @@ git branch cleanup
 git rm ‘*.txt’
 git merge clean_up
 git branch -d clean_up
+git push heroku-staging staging:master								heroku has only master branch, so you only could push to master
 
 branching
 ******************************************************************
@@ -93,10 +109,12 @@ git checkout <branchName>									change to other branch
 git checkout -b <branchName>									create and change to the branch
 git merge <branchName>										merge changes from a branch to other
 git branch -d <branchName>									delete the branch
+git branch -D <branch>										delete the branch anyway
 git push {name} {branch}									setup a new branch in remote based on local branch 
 git branch -r 											show all remote branches
 git remote show <name>
-git push origin :<branch>									delete the branch in remote
+git push <name> :<branch>									delete the branch in remote
+git remote prune <name>
 
 collabration
 ******************************************************************
