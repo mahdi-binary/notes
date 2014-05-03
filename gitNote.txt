@@ -19,14 +19,16 @@ local repo
 git init											initialise a git folder
 ===========================
 
-git status											To see unstaged change since last commit.
+git status											to see unstaged change since last commit.
 ===========================
-git checkout — {files}										To get back to committed file and ignore the changes.
-
+git checkout — {files}										to get back to committed file and ignore the changes.
+.git/info/exclude										the list of not repo folders or files
+.gitignore	put logs/*.log									ignore servers repository logs 
+											
 git add {files/—all}										add changes to stage
 ===========================
 git reset HEAD {files}										unstaged a staged file	HEAD refers to last commit we made
-
+git rm <filename>										remove file from repo
 
 git commit -m “{Metadata of what you done.}”							commit changes to repo
 ===========================
@@ -39,11 +41,34 @@ git reset —hard HEAD^^										back to two last commit
 
 git log												show the last commit and comments
 ===========================
+git config —global color.ui true								color the hash to find where is commit
+git log —pretty=oneline
+git log —pretty=format:”%h %ad- %s [%an]”
+	%ad -> author date
+	%an -> author name
+	%h  -> SHA hash
+	%s  -> subject
+	%d  -> ref names
+git log —online -p										what is changed in each commit
+git log —online —graph
+git log —until=1.minute.ago
+git log —since=1.day.ago		minute/day/week/month or <date>
+git rm —cached development.log									stop following this log file
 
 git diff 											show edit files
 ===========================
 git diff											unstaged edits
+git diff HEAD											same as git diff
 git diff —staged									 	staged files
+git diff <SHA1>..<SHA2>
+git log —online
+git log master <branch>
+git diff —until=1.minute.ago —since=1.day.ago
+git mylog
+
+git blame
+===========================
+git blame <filename> —date short
 
 git tag												to find the tags, usually for versioning
 ===========================
@@ -65,6 +90,15 @@ git remote add {name} {URL}									adding a remote to you repo
 	{name} => name for this remote
 git remote -v											show remote repositories
 git remove {name}										remove a repo from service
+git config —global user.name “Name”
+git config —global user.email “mail@mail”
+git config —global core.edit emacs
+git config —global merge.tools opendiff
+git config user.mail “mail2@mail”								config email for current repo
+git config —list
+git config user.email
+
+git config —global alias.<something> {you command} -> git <something>
 
 git push -u {name} {branch}									pushing to remote
 ===========================
@@ -116,13 +150,21 @@ git remote show <name>
 git push <name> :<branch>									delete the branch in remote
 git remote prune <name>
 
+git rebase
+===========================
+git checkout <branch> && git rebase master && git checkout master && git merge admin
+git rebase —continue										rebase after solving conflict issue
+git rebase —skip										ignore the patch
+git rebase —abort										go back to before rebase
+
 collabration
 ******************************************************************
 git pull && git push										different version of different file goes to remote caused error
 	=>git pull = git fetch && git merge origin/master
 git pull -> “merge conflict” && edit <conflicted file> && git commit -a && git push		different version of same file 
 
-
+history & configuration
+******************************************************************
 
 
 /etc/sudoers: 
