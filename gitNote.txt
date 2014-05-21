@@ -34,7 +34,7 @@ git commit -m “{Metadata of what you done.}”							commit changes to repo
 ===========================
 git commit -a -m “{modify comment}” {file name}							skip staging and commit
 git reset —soft HEAD^										reset last commit and puts it in staged state
-git commit —amend -m “{New comment}”								add a file to preview commit and overwrite comment
+git commit —amend -m “{New comment}”								add a file to previous commit and overwrite comment
 git reset —hard HEAD^							    			reset last commit
 git reset —hard HEAD^^										back to two last commit
 
@@ -114,6 +114,7 @@ git rebase	=> 1. master -> tempMaster
 		=> 2. origin/master -> master
 		=> 3. tempMaster -> master
 
+
 git clone {URL}	{Optional folder name}								create a folder with remote repository files
 ===========================
 What git does: 		- Downloads the entire repository into a new git-real directory.
@@ -135,6 +136,27 @@ git merge clean_up
 git branch -d clean_up
 git push heroku-staging staging:master								heroku has only master branch, so you only could push to master
 
+stashing
+******************************************************************
+git stash  				git stash save
+git stash apply				git stash apply stash@{0}
+git stash list
+git stash apply stash@{1}
+git stash drop				git stash drop stash@{0}
+git stash pop				git stash apply & git stash drop			apply the stash and remove the stash from too of list if there is no conflict
+git stash save --keep-index									stash the unstaged files only							
+git stash save —include-untracked								stash untracked files (new files)
+git list —state
+git stash show Stash@{1}
+git stash show —patch
+git stash save “Comment”
+git stash branch BranchName stash@{1}
+git stash clear
+
+stashing conflict
+===========================
+
+
 branching
 ******************************************************************
 git branch <branchName>										create a branch
@@ -153,6 +175,11 @@ git remote prune <name>
 git rebase
 ===========================
 git checkout <branch> && git rebase master && git checkout master && git merge admin
+git rebase master										if you are in <branch> it moving commits to point which last master commit is done.
+git rebase -i HEAD~3	pick	do it again							changing previews commits after what you specify
+			reword	edit massage
+			edit
+			squash
 git rebase —continue										rebase after solving conflict issue
 git rebase —skip										ignore the patch
 git rebase —abort										go back to before rebase
