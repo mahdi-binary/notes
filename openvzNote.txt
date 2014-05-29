@@ -1,45 +1,75 @@
-mii-tool eth0
-wget -q -O - http://linux.dell.com/repo/hardware/latest/bootstrap.cgi | bash
-yum install srvadmin-all
-yum upgrade
-yum install dell_ft_install
-yum install $(bootstrap_firmware)
-wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
-rpm -i rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
-rpm -qa postfix
-service postfix status
-yum install vzkernel yum-presto vzctl
-rpm -qa vzkernel
-yum install vzkernel yum-presto vzctl
-wget -P /etc/yum.repos.d/ http://ftp.openvz.org/openvz.repo
-rpm --import http://ftp.openvz.org/RPM-GPG-Key-OpenVZ
-yum install vzkernel
-yum install vzctl vzquota ploop
-reboot
-yum update
-vim /etc/postfix/main.cf
-vi /etc/postfix/main.cf
-rpm -qa mail
-yum install mailx
+OpenVZ Host Installation:
+
+1- Drac: connection & framework update + update dns info., if needed. <For dell server>
+2- Raid configuration: [preference Raid 6 or 50]
+3- Gparted: format for > 2TB physical storage: 4GB swap, 100 GB /, * /vz
+4- CentOS minimal: install & update it
+5- 3rd party packages:
+	yum install yum	
+	wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+	rpm -i rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+	yum update
+	yum install bash-completion perl
+	yum install ntp & ntpstat & service ntpd start & chkconfig ntpd on & ntpdate & date	
+6- Dell Openmanger: <For dell servers>
+	http://linux.dell.com/repo/hardware/
+		example:
+		wget -q -O - http://linux.dell.com/repo/hardware/Linux_Repository_14.04.00/bootstrap.cgi | bash
+		yum install srvadmin-all
+		yum upgrade
+		yum install dell_ft_install
+		yum install $(bootstrap_firmware)
+		yum install syscfg
+		yum install raidcfg
+		yum install dcism
+		inventory_firmware
+7- Postfix:
+	rpm -qa postfix	& yum install postfix		# Install it.
+	service postfix status
+???	vi /etc/postfix/main.cf
+	rpm -qa mailx & yum install mailx
+8- OpenVZ:
+	wget -P /etc/yum.repos.d/ http://ftp.openvz.org/openvz.repo	# Add openvz.repo
+	rpm --import http://ftp.openvz.org/RPM-GPG-Key-OpenVZ
+	rpm -qa vzkernel & yum install vzkernel yum-presto vzctl & yum install vzctl vzquota ploop
+	reboot
+9- Disabled SELINUX
+
+OpenVZ Commands:
+
 vzlist
-cd /vz/template/cache
-yum install bash-completion
-locale
-vzctl create 101 --config unlimited --ipadd 207.210.194.143 --ostemplate debian-7.0-x86_64 
-vzlist 
 vzlist -a
-vzctl start 101
-ping 207.210.194.143
-service iptables stop
-rpm -qa ntp
-yum install ntp
-date
-ntpdate
-ntpstat
-/etc/init.d/ntpd status
-/etc/init.d/ntpd start
-chkconfig ntpd on 
-ntpstat
-ntpdate 
-date
+
 vzctl create 101 --config unlimited --ipadd 207.210.194.143 --ostemplate debian-7.0-x86_64 
+vzctl start 101
+vzctl enter 101
+
+
+Migration:
+
+* Check that the host ranges are the same to see if IP migration is required
+* Checking which servers need to be moved with vzlist
+* Checking for large files that can be trimmed before the copy starts
+* Cleaning the apt cache
+* Checking that the incoming system is ready to be copied to (disk, etc)
+* Preparing that system for copying (make the directories required)
+* Going over the options to rsync and why they are required
+	rsync -aHAXv --numeric-ids --delete root@hostparrot:/vz/private/102/ /vz/private/102/
+* Copying within a tmux session
+* Removing the server from the DNS pool
+* Checking that the DNS changes have propagated using dig before continuing
+* Shutting down the server
+* Disabling the server
+* Doing the final rsync
+* Copying over the configuration and checking VE_ROOT is created
+* Starting the container
+* Autostarting with the host
+* Going into the container and checking that what should be running is running
+* Reading back to the DNS pool
+
+
+
+
+
+cd /vz/template/cache
+locale

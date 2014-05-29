@@ -192,6 +192,12 @@ git pull -> “merge conflict” && edit <conflicted file> && git commit -a && g
 
 history & configuration
 ******************************************************************
+Purging history
+===========================
+git clone petshop-filter									back up the entire repo
+cd pets-hop-filter
+git filter-branch —-tree-filter “rm -f passwords.txt” -- --all					--all filter all commits in all branches
+												Head filter only current branch
 
 
 /etc/sudoers: 
