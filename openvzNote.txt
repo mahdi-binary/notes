@@ -5,11 +5,11 @@ OpenVZ Host Installation:
 3- Gparted: format for > 2TB physical storage: 4GB swap, 100 GB /, * /vz
 4- CentOS minimal: install & update it
 5- 3rd party packages:
-	yum install yum	
+	yum install wget perl bash-completion
 	wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 	rpm -i rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 	yum update
-	yum install bash-completion perl
+	yum install bash-completion
 	yum install ntp & ntpstat & service ntpd start & chkconfig ntpd on & ntpdate & date	
 6- Dell Openmanger: <For dell servers>
 	http://linux.dell.com/repo/hardware/
@@ -44,32 +44,7 @@ vzctl create 101 --config unlimited --ipadd 207.210.194.143 --ostemplate debian-
 vzctl start 101
 vzctl enter 101
 
-
-Migration:
-
-* Check that the host ranges are the same to see if IP migration is required
-* Checking which servers need to be moved with vzlist
-* Checking for large files that can be trimmed before the copy starts
-* Cleaning the apt cache
-* Checking that the incoming system is ready to be copied to (disk, etc)
-* Preparing that system for copying (make the directories required)
-* Going over the options to rsync and why they are required
-	rsync -aHAXv --numeric-ids --delete root@hostparrot:/vz/private/102/ /vz/private/102/
-* Copying within a tmux session
-* Removing the server from the DNS pool
-* Checking that the DNS changes have propagated using dig before continuing
-* Shutting down the server
-* Disabling the server
-* Doing the final rsync
-* Copying over the configuration and checking VE_ROOT is created
-* Starting the container
-* Autostarting with the host
-* Going into the container and checking that what should be running is running
-* Reading back to the DNS pool
-
-
-
-
+rsync -aHAXv --numeric-ids --delete root@hostparrot:/vz/private/102/ /vz/private/102/
 
 cd /vz/template/cache
 locale
