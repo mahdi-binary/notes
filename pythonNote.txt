@@ -1,10 +1,22 @@
 Sequential
 *****************************************
+print <variable1>,<variable2>,...
+x = raw_input('<string>?')
 
 Condotional
 *****************************************
 if <condition>:
-	<do somthing>
+	<do 1>
+elif <condition>:
+	<do 2>
+else:
+	<do 3>
+
+try:
+	<do 1>
+except:
+	<do 2>
+	quit()
 
 Irritational				# loop
 *****************************************
@@ -13,6 +25,17 @@ for x in list_t:
 func(x) for x in list_t if condition(x)
 while <condition>:			# until the condition is correct it will continue
 	<do somthing>
+
+Type
+*****************************************
+type(123)	->> <type'int'>
+* Integer
+* Float
+* String
+
+int(<float>)
+float(<int>)
+int(<str>)
 
 
 list
