@@ -1,0 +1,30 @@
+Networking Notes
+============================================
+
+* Packet messaging
+
+* Layered Network Model:
+A layered approach allowed the problem of designing a network to be broken into more manageable sub problems.
+
+** TCP/IP "Internet Protocol Suite"
+- Application Layer: Web, E-Mail, File Transfer  
+- Transport Layer (TCP): Reliable Connections
+- Internet Network Layer (IP): Simple, Unreliable
+-- Worldwide number addresses
+-- 1-255.1-255.1-255.1-255
+-- 141.25.*.*:which network
+-- NAT (Network Address Translation)
+-- Traceroute
+-- TTL
+- Link Layer (Ethernet, WiFi): Physical Connections
+-- Serial numbers(physical address): For only one hop 
+
+** OSI (Open System Interconnection Model): 7 layer
+
+* Internet Standard
+
+
+ 
+******************************************
+
+
