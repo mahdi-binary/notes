@@ -90,10 +90,10 @@ git remote add {name} {URL}									adding a remote to you repo
 	{name} => name for this remote
 git remote -v											show remote repositories
 git remove {name}										remove a repo from service
-git config —global user.name “Name”
-git config —global user.email “mail@mail”
-git config —global core.edit emacs
-git config —global merge.tools opendiff
+git config --global user.name “Name”
+git config --global user.email “mail@mail”
+git config --global core.edit emacs
+git config --global merge.tools opendiff
 git config user.mail “mail2@mail”								config email for current repo
 git config —list
 git config user.email

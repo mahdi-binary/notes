@@ -1,0 +1,59 @@
+* Microeconomics: the study of individual firms and households in specific industries and markets
+* Macroeconomics: the study of the entire economy of a region, a country, or the entire world
+
+* Opportunity Cost: is the value of the next-best forgone alternative to making a choice
+* Gains from Trade: improvements in income, production, or satisfaction owing to the exchange of goods or services
+* Specialization: a concentration of production effort on a single specific task
+* Division of Labor: the division of production into various parts in which different groups of workers specialize
+
+* Comparative Advantage: a situation in which a person or group can produce one good at a lower opportunity cost than another person or group
+
+* Production Possibilities Curve: a graph illustrating the tradeoffs an economy faces when producing two different goods
+* Increasing Opportunity Costs: the idea that as production of a good increases, the opportunity cost of producing that good becomes higher
+
+* Causation: the concept that one event brings about another event.
+* Correlation: the concept that one event is usually observed to occur along with another event; note that correlation does not imply causation
+
+* Normative Economics: economic analysis that makes recommendations about economic policy
+* Positive Economics: economic analysis that explains what happens in the economy and why, without making recommendations about economic policy.
+
+
+The Supply and Demand Model
+
+	* Price: The amount of money or other goods that one must pay to obtain a particular good.
+
+	* Demand: A relationship between price and quantity demanded.
+		** Quantity Demanded: The quantity of a good that people want to buy at a given price during a specific time period.
+		** Demand Schedule: A tabular presentation of demand showing the price and quantity demanded for a particular good, all else being equal. Below is an example of a demand schedule for bicycles.
+		** Law of Demand: The tendency for the quantity demanded of a good in a market to decline as its price rises.
+		** Demand Curve: A graph of demand showing the down-ward sloping relationship between price and quanity demanded. Below is an example of a demand curve for bicycles, showing shifts of the demand curve versus movements along the demand curve.
+
+	* Supply: A relationship between price and quantity supplied.
+		** Quantity Supplied: The quantity of a good that firms are willing to sell at a given price.
+		** Supply Schedule: A tabular presentation of supply showing the price and quantity supplied of a particular good, all else being equal. Below is an example of a supply schedule for bicycles.
+		** Law of Supply: The tendence for the quantity supplied of a good in a market to increase a its price rises.
+		** Supply Curve: A graph of supply showing the upward-sloping relationship between price and quantity supplied. Below is an example of a supply curve for bicycles, showing shifts of versus movements along the supply curve.
+
+	* Shortage (excess demand): A situation in which quantity demanded is greater than quantity supplied.
+	* Surplus (excess supply): A situation in which quantity supplied is greater than quantity demanded.
+	* Equilibrium Price: The price at which quantity supplied equals quantity demanded.
+	* Equilibrium Quantity: The quantity traded at the equilibrium price.
+	* Market Equilibrium: The situation in which the price is equal to the equilibrium price and the quantity traded equals the equilibrium quantity. The figure below shows a market equilibrium.
+
+	* Elastic Demand: demand for which the price elasticity is greater than 1.
+	* Inelastic Demand: demand for which the price elasticity is less than 1.
+
+	* Unit-Free Measure: a measure that does not depend on a unit of measurement.
+	
+	* Price Elasticity of Demand: the percentage change in the quantity demanded of a good divided by the percentage change in the price of that good.
+	* Price Elasticity of Supply: the percentage change in quantity supplied divided by the percentage change in price.
+		** Perfectly Elastic Demand: demand for which the price elasticity is infinite, indicating an infinite response to a change in price and therefore a horizontal demand curve.
+		** Perfectly Elastic Supply: supply for which the price elasticity is infinite, indicating an infinite response of quantity supplied to a change in price and therefore a horizontal supply curve.
+		** Perfectly Inelastic Demand: demand for which the price elasticity is zero, indicating no response to a change in price and therefore a vertical demand curve.
+		** Perfectly Inelastic Supply: supply for which the price elasticity is zero, indicating no response of quantity supplied to a change in price and therefore a vertical supply curve.
+
+	* Price Control: a government law or regulation that sets or limits the price to be charged for a particular good.
+		** Price Ceiling: a government price control that sets the maximum allowable price for a good.
+			# Rent Control: a government price control that sets the maximum allowable rent on a house or apartment.
+		** Price Floor: a government price control that sets the minimum allowable price for a good.
+			# Minimum Wage: a wage per hour below which it is illegal to pay workers.
