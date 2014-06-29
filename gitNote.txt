@@ -97,8 +97,19 @@ git config --global merge.tools opendiff
 git config user.mail “mail2@mail”								config email for current repo
 git config —list
 git config user.email
-
+git config —-global core.autocrlf input								make line breaker to windows mode
+git config —-global core.autocrlf true								make line breaker to linux mode
+git config —-global core.autocrlf false								only windows format
 git config —global alias.<something> {you command} -> git <something>
+
+vi .gitattributes										the file we config our file types		
+		*			text=auto
+		*.html			text
+		*.css			text
+		*.txt			text
+		*.bat			text eol=crlf
+		*.sh			text eol=lf
+		*.jpg			binary
 
 git push -u {name} {branch}									pushing to remote
 ===========================
@@ -192,8 +203,18 @@ git pull -> “merge conflict” && edit <conflicted file> && git commit -a && g
 
 history & configuration
 ******************************************************************
+Purging history
+===========================
+git clone petshop petshop-filter									back up the entire repo
+cd pets-hop-filter
+git filter-branch —-tree-filter “rm -f passwords.txt” -- --all					--all filter all commits in all branches
+												Head filter only current branch
+git filter-branch --index-filter “git rm —-cached —-ignore-unmatch passwords.txt”			command is going to run in staging area
+git log —-oneline & git filter-branch —f —-prune-empty —- —-all					delete empty logs from you log history
+git filter-branch —-tree-filter “rm -f passwords.txt” —-prune-empty --all
 
+git cherry-pick —-edit <hash>
+git cherry-pick —-no-commit <hash> <hash2> & git commit -a -m
+git cherry-pick —x <hash>
+git cherry-pick —-signoff <hash>
 
-/etc/sudoers: 
-
-(+) scout ALL=(ALL) NOPASSWD: /sbin/iptables-save
