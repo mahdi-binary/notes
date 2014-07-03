@@ -18,13 +18,20 @@ except:
 	<do 2>
 	quit()
 
+== >= <= != is “is not”
+
 Irritational				# loop
 *****************************************
-for x in list_t:
+for x in list_t:			# Definite loop
 	<do somthing>
+
 func(x) for x in list_t if condition(x)
-while <condition>:			# until the condition is correct it will continue
+
+while <condition>:			# Indefinite loop until the condition is correct it will continue
 	<do somthing>
+	continue
+	break				# stop the loop
+
 
 Type
 *****************************************
@@ -32,11 +39,26 @@ type(123)	->> <type'int'>
 * Integer
 * Float
 * String
+* Boolean 	->> True False
+None
+
 
 int(<float>)
 float(<int>)
 int(<str>)
 
+function
+*****************************************
+* Built-in functions
+max(<list>)
+min(<list>)
+
+* Define functions
+def func(pr1,pr2,pr3):				# define the function func() 
+	<do something>
+	return <something>
+
+func()					# running func()
 
 list
 *****************************************

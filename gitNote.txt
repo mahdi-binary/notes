@@ -201,6 +201,14 @@ git pull && git push										different version of different file goes to remote
 	=>git pull = git fetch && git merge origin/master
 git pull -> “merge conflict” && edit <conflicted file> && git commit -a && git push		different version of same file 
 
+submodules
+******************************************************************
+git submodule add git@example.com:css.git
+git submodule init
+git submodule update
+git push --recurse-submodules=check
+git push --recurse-submodules=on-demand
+
 history & configuration
 ******************************************************************
 Purging history
