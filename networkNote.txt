@@ -8,14 +8,21 @@ A layered approach allowed the problem of designing a network to be broken into 
 
 ** TCP/IP "Internet Protocol Suite"
 - Application Layer: Web, E-Mail, File Transfer  
+
 - Transport Layer (TCP): Reliable Connections
+-- keep copy of data to get acknowledgement
+-- “too long” send it again
+
 - Internet Network Layer (IP): Simple, Unreliable
 -- Worldwide number addresses
 -- 1-255.1-255.1-255.1-255
 -- 141.25.*.*:which network
 -- NAT (Network Address Translation)
--- Traceroute
+-- Trace-route
 -- TTL
+-- Domain Name System
+--- Like post letter system
+
 - Link Layer (Ethernet, WiFi): Physical Connections
 -- Serial numbers(physical address): For only one hop 
 
