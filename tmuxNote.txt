@@ -1,0 +1,5 @@
+^b ?				# command
+
+tmux new -s demo
+tmux attach -t demo
+tmux ls
