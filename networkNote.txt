@@ -8,6 +8,12 @@ A layered approach allowed the problem of designing a network to be broken into 
 
 ** TCP/IP "Internet Protocol Suite"
 - Application Layer: Web, E-Mail, File Transfer  
+-- Port
+-- nmap
+-- Application protocols: http, ftp, mail, etc.
+--- Web: http
+--- GET URL
+
 
 - Transport Layer (TCP): Reliable Connections
 -- keep copy of data to get acknowledgement
