@@ -55,6 +55,12 @@ git log —until=1.minute.ago
 git log —since=1.day.ago		minute/day/week/month or <date>
 git rm —cached development.log									stop following this log file
 
+git reflog											show the log of local repo
+===========================
+git reset --hard <hash> 							stop following this log file
+git log --walk-reflog
+
+
 git diff 											show edit files
 ===========================
 git diff											unstaged edits
@@ -145,6 +151,7 @@ git branch cleanup
 git rm ‘*.txt’
 git merge clean_up
 git branch -d clean_up
+git branch -D <branch>
 git push heroku-staging staging:master								heroku has only master branch, so you only could push to master
 
 stashing
