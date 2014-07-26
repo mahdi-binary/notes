@@ -6,7 +6,7 @@ Networking Notes
 * Layered Network Model:
 A layered approach allowed the problem of designing a network to be broken into more manageable sub problems.
 
-** TCP/IP "Internet Protocol Suite"
+* TCP/IP "Internet Protocol Suite"
 - Application Layer: Web, E-Mail, File Transfer  
 -- Port
 -- nmap
@@ -32,11 +32,20 @@ A layered approach allowed the problem of designing a network to be broken into 
 - Link Layer (Ethernet, WiFi): Physical Connections
 -- Serial numbers(physical address): For only one hop 
 
-** OSI (Open System Interconnection Model): 7 layer
+* OSI (Open System Interconnection Model): 7 layer
 
-* Internet Standard
+* Encryption and Confidentiality
 
+- secret-key
 
+Alice { Plain text =encrypt=> Cipher Text } -> Message Might be Intercepted -> Bob { Chiper Test =decrypt=> Plain text }
+
+-- Cryptographic Hash
+   Input =cryptographic hash function=> digest
+--- sha1
+--- md5  
+
+- public-key
  
 ******************************************
 

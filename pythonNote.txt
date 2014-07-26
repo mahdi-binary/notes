@@ -62,17 +62,23 @@ func()					# running func()
 
 list
 *****************************************
-mt_list = [ ] 				#empty list
+mt_list = [ ]				  #empty list
+list1 = list() 				#empty list
 list1 = [1, 2, 3]
 list2 = ['hello', 'welcome']
 list3 = [[], [1, 2, 3], ['Yes', 'No']]
 len(listX) 				#length of listX
+max(listX)
+min(listX)
+sum(listX)
+string1.splite(character)
 
 ## String is a kind of list 
 list3[3]                    		# third element of list3
 list3[-1]				# last element of list3
 list2[2]='bye'				# change 2nd element of list2 to 'bye'
 list2.append('hi')			# add a new element to the list
+list2.sort()
 list3.pop() or (3)			# remove last of 3rd element of list3
 list2.remove(x)				# remove x in the list2
 x in list3				# is there x in list3 (Boolean)
@@ -97,6 +103,17 @@ d2 = {‘a’ : 47}
 d3 = {‘ab’ : [1,2,4,8]}
 d2[‘a’]  -> 47
 d3.items() -> <key>,<value>		#tip: <key> should be unhashable value.
+
+Files
+*****************************************
+handle = open(filename, mode)
+mode :	'r' read
+	'w' write
+text = handle.read()
+
+for cheese in handle:
+       print cheese
+
 
 Mouse input
 *****************************************
