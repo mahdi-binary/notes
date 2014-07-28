@@ -43,7 +43,9 @@ Alice { Plain text =encrypt=> Cipher Text } -> Message Might be Intercepted -> B
 -- Cryptographic Hash
    Input =cryptographic hash function=> digest
 --- sha1
---- md5  
+--- md5
+
+- public-key
 
 - public-key
  
