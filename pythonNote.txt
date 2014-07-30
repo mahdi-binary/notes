@@ -97,12 +97,16 @@ greet.startwith(str1)
 
 Dictionary				# mapping 	key -> values
 *****************************************
+dict1 = dict()
 d = {1: 2, 3: 4, 6: 727, <key>: <value>}
-d[1] = 37
-d2 = {‘a’ : 47}
-d3 = {‘ab’ : [1,2,4,8]}
-d2[‘a’]  -> 47
-d3.items() -> <key>,<value>		#tip: <key> should be unhashable value.
+d['ali'] = 37
+d2 = {'a' : 47}
+d3 = {'ab' : [1,2,4,8]}
+d2['a']  -> 47
+d2.get('a',0)
+d3.keys()   list(d3) -> [<keys>]
+d3.values()
+d3.items() -> (<key>,<value>)		#tip: <key> should be unhashable value.
 
 Files
 *****************************************
