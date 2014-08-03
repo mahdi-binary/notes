@@ -47,8 +47,17 @@ Alice { Plain text =encrypt=> Cipher Text } -> Message Might be Intercepted -> B
 
 - public-key
 
-- public-key
- 
+Plaintext = Encrypt: Public key => Cipher text -> Message Might be Intercepted -> Cipher text = Decrypt: Private key => Plaintext
+
+-- Public/Private Pairs
+-- 2 large random number
+-- Security Socket
+
+-- Transport Layer Security (TLS)
+
+-- Digital Certification
+--- Certification Authority (CA)
+
 ******************************************
 
 

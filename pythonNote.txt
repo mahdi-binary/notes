@@ -108,6 +108,13 @@ d3.keys()   list(d3) -> [<keys>]
 d3.values()
 d3.items() -> (<key>,<value>)		#tip: <key> should be unhashable value.
 
+Tuple                                 # immutable
+*****************************************
+x = (1, 2, 4)
+(x , y) = (12, 'Ali')
+a , b = ('See', 'saa')
+
+
 Files
 *****************************************
 handle = open(filename, mode)
@@ -134,11 +141,6 @@ Images
 *****************************************
 im = simplegui.image(<URL>)
 canvas.draw_image(im, src_center, src_size, dst_center, dst_size)		# rectangle in image: src_center, src_size	# rectangle in canvas: dst_center, dst_size
-
-
-
-
-
 
 Event Driven Programming Program structure
 *****************************************
