@@ -3,6 +3,29 @@ Sequential
 print <variable1>,<variable2>,...
 x = raw_input('<string>?')
 
+Boolean
+*****************************************
+True, False
+not, and, or
+==, >=, <=, != 
+is, “is not”
+
+Mathematics
+*****************************************
++, -, //, /, %, **
+
+import math
+math.pi
+math.sqrt()
+
+Documentation
+*****************************************
+"""
+Document what the function are doing
+"""
+# Comment what the line is about
+
+
 Condotional
 *****************************************
 if <condition>:
@@ -54,7 +77,7 @@ max(<list>)
 min(<list>)
 
 * Define functions
-def func(pr1,pr2,pr3):				# define the function func() 
+def func(pr1,pr2,pr3):			# define the function func() 
 	<do something>
 	return <something>
 
