@@ -5,7 +5,7 @@ OpenVZ Host Installation:
 3- Gparted: format for > 2TB physical storage: 4GB swap, 100 GB /, * /vz
 4- CentOS minimal: install & update it
 5- 3rd party packages:
-	yum install wget perl bash-completion
+	yum install wget perl
 	wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 	rpm -i rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 	yum update
@@ -32,8 +32,12 @@ OpenVZ Host Installation:
 	wget -P /etc/yum.repos.d/ http://ftp.openvz.org/openvz.repo	# Add openvz.repo
 	rpm --import http://ftp.openvz.org/RPM-GPG-Key-OpenVZ
 	rpm -qa vzkernel & yum install vzkernel yum-presto vzctl & yum install vzctl vzquota ploop
-	reboot
 9- Disabled SELINUX
+	vim /etc/sysctl.conf
+	vim /etc/modprobe
+	vim /etc/vz/vz.conf	
+
+E- Reboot
 
 OpenVZ Commands:
 
@@ -48,3 +52,5 @@ rsync -aHAXv --numeric-ids --delete root@hostparrot:/vz/private/102/ /vz/private
 
 cd /vz/template/cache
 locale
+
+ehtesham	otabirworyli

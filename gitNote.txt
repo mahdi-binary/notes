@@ -101,7 +101,6 @@ git config --global user.email “mail@mail”
 git config --global core.edit emacs
 git config --global merge.tools opendiff
 git config user.mail “mail2@mail”								config email for current repo
-git config --list
 git config user.email
 git config —-global core.autocrlf input								make line breaker to windows mode
 git config —-global core.autocrlf true								make line breaker to linux mode
