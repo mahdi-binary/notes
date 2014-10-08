@@ -115,7 +115,25 @@ Tuple                                 # immutable
 x = (1, 2, 4)
 (x , y) = (12, 'Ali')
 a , b = ('See', 'saa')
+<<<<<<< HEAD
 sorted( [ (v,k) for k,v in c.item() ] )
+=======
+<<<<<<< HEAD
+
+Regular Expression 
+*****************************************
+^X.*
+import re
+f = re.search(^X.*,line)
+f = re.find('[0-9]+', x)
+
+^    Begin of line
+.    Match any character
+*    Many times
+=======
+sorted( [ (v,k) for k,v in c.item() ] )
+>>>>>>> Edit
+>>>>>>> Edit
 
 Files
 *****************************************
